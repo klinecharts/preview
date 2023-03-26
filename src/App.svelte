@@ -4,9 +4,9 @@
   import '@klinecharts/pro/dist/klinecharts-pro.css'
 
   onMount(() => {
-    const pathname = window.location.pathname
+    const hash = window.location.hash
     let locale = 'zh-CN'
-    if (pathname === '/en-US' || pathname === '/en-US/') {
+    if (hash.endsWith('#en-US')) {
       locale = 'en-US'
     }
     const options = {
