@@ -6,7 +6,6 @@ KLineChart features preview.
 npm run dev
 ```
 
-## Build
-```bash
-npm run build
-```
+## Links
++ [KLineChart](https://github.com/liihuu/KLineChart)
++ [Pro](https://github.com/klinecharts/pro)

@@ -2,10 +2,9 @@
   import { onMount } from 'svelte'
   import { KLineChartPro, DefaultDatafeed } from '@klinecharts/pro'
   import '@klinecharts/pro/dist/klinecharts-pro.css'
-
+  let locale = 'zh-CN'
   onMount(() => {
     const hash = window.location.hash
-    let locale = 'zh-CN'
     if (hash.endsWith('#en-US')) {
       locale = 'en-US'
     }
@@ -31,13 +30,19 @@
 </script>
 
 <main>
+  <div class="github"></div>
   <p class="announcement-bar">
     <svg viewBox="0 0 1024 1024" width="16" height="16">
       <path d="M512 184c44.3 0 87.3 8.7 127.6 25.7 39 16.5 74.1 40.2 104.3 70.3 30.2 30.2 53.8 65.3 70.3 104.3C831.3 424.7 840 467.7 840 512s-8.7 87.3-25.7 127.6c-16.5 39-40.2 74.1-70.3 104.3-30.2 30.2-65.3 53.8-104.3 70.3C599.3 831.3 556.3 840 512 840s-87.3-8.7-127.6-25.7c-39-16.5-74.1-40.2-104.3-70.3-30.2-30.2-53.8-65.3-70.3-104.3C192.7 599.3 184 556.3 184 512s8.7-87.3 25.7-127.6c16.5-39 40.2-74.1 70.3-104.3s65.3-53.8 104.3-70.3C424.7 192.7 467.7 184 512 184m0-120C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64z" fill="#006EFF"/>
       <path d="M452 464.5h120v300H452z" fill="#006EFF"/>
       <path d="M512 323.3m-60 0a60 60 0 1 0 120 0 60 60 0 1 0-120 0Z" fill="#006EFF"/>
     </svg>
-    UI 来自 <a href="https://pro.klinecharts.com">KLineChart Pro</a>，数据来自 <a href="https://polygon.io">polygon.io</a>
+    UI&nbsp;{locale === 'zh-CN' ? '来自' : 'from'}&nbsp;
+    <a target="_blank" rel="noreferrer noopener" href="https://pro.klinecharts.com">KLineChart Pro</a>
+    {locale === 'zh-CN' ? '，数据来自' : ', Data from'}&nbsp;
+    <a target="_blank" rel="noreferrer noopener" href="https://polygon.io">polygon.io</a>
+    {locale === 'zh-CN' ? '，源码' : ', Source code'}&nbsp;
+    <a target="_blank" rel="noreferrer noopener" href="https://github.com/klinecharts/preview">klinecharts/preview</a>
   </p>
   <div id="container">
   </div>
