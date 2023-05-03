@@ -22,6 +22,6 @@
   },
   "dependencies": {
     "@klinecharts/pro": "^0.1.1",
-    "klinecharts": "^9.2.1"
+    "klinecharts": "^9.2.2"
   }
 }
