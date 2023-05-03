@@ -2,7 +2,9 @@
   import { onMount } from 'svelte'
   import { KLineChartPro, DefaultDatafeed } from '@klinecharts/pro'
   import '@klinecharts/pro/dist/klinecharts-pro.css'
+  
   let locale = 'zh-CN'
+
   onMount(() => {
     const hash = window.location.hash
     if (hash.endsWith('#en-US')) {
