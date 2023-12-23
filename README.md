@@ -7,5 +7,5 @@ npm run dev
 ```
 
 ## Links
-+ [KLineChart](https://github.com/liihuu/KLineChart)
++ [KLineChart](https://github.com/klinecharts/KLineChart)
 + [Pro](https://github.com/klinecharts/pro)
