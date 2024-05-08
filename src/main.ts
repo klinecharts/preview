@@ -1,8 +1,6 @@
-import './app.css'
-import App from './App.svelte'
+import setupApp from './app'
 
-const app = new App({
-  target: document.getElementById('app')!,
-})
+import '@klinecharts/pro/dist/klinecharts-pro.css'
+import './index.css'
 
-export default app
+setupApp(document.querySelector<HTMLDivElement>('#app')!)
